@@ -1,11 +1,12 @@
 <?php
 require_once("konf.php");
+global $connect;
 if(!empty($_REQUEST["teooriatulemus"])){
-    $kask=$yhendus->prepare(
+    $kask=$connect->prepare(
         "UPDATE jalgrattaeksam SET teooriatulemus=? WHERE id=?");
     $kask->bind_param("ii", $_REQUEST["teooriatulemus"], $_REQUEST["id"]); $kask->execute();
 }
-$kask=$yhendus->prepare("SELECT id, eesnimi, perekonnanimi   FROM jalgrattaeksam WHERE teooriatulemus=-1");
+$kask=$connect->prepare("SELECT id, eesnimi, perekonnanimi   FROM jalgrattaeksam WHERE teooriatulemus=-1");
 $kask->bind_result($id, $eesnimi, $perekonnanimi);
 $kask->execute();
 ?>
