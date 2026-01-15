@@ -17,7 +17,7 @@ $kask=$connect->prepare("SELECT id, eesnimi, perekonnanimi   FROM jalgrattaeksam
 $kask->execute();
 ?>
 <!doctype html>
-<html>
+<html lang="et">
 <head>
     <title>Slaalom</title>
 </head>
