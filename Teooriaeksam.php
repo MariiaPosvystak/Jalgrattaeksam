@@ -17,9 +17,11 @@ if (isset($_REQUEST['teooriatulemus'])) {
 include("header.php");
 include("nav.php");
 ?>
+<main>
 <h2>Teooria eksam</h2>
 <?php
 naitaTabel();
+echo "</main>";
 include("footer.php");
 ?>
 </body>

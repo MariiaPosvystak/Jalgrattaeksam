@@ -35,6 +35,7 @@ function asenda($nr){
 include("header.php");
 include("nav.php");
 ?>
+<main>
 <h1>Lõpetamine</h1>
 <table>
     <tr>
@@ -71,6 +72,7 @@ include("nav.php");
     }
     ?>
 </table>
+</main>
 <?php
 include("footer.php");
 ?>
