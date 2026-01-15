@@ -1,5 +1,5 @@
 <?php
-require_once("konf.php");
+require("konf.php");
 global $connect;
 if(!empty($_REQUEST["vormistamine_id"])){
     $kask=$connect->prepare(
