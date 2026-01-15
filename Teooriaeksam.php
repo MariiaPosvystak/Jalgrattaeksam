@@ -38,5 +38,8 @@ include("nav.php");
     }
     ?>
 </table>
+<?php
+include("footer.php");
+?>
 </body>
 </html>

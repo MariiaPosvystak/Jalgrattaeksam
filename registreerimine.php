@@ -32,5 +32,8 @@ if(isSet($_REQUEST["lisatudeesnimi"])){
         <dd><input type="text" name="perekonnanimi" /></dd>
         <dt><input type="submit" name="sisestusnupp" value="sisesta" /></dt>  </dl>
 </form>
+<?php
+include("footer.php");
+?>
 </body>
 </html>
