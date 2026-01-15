@@ -14,6 +14,7 @@ $kask->execute();
 <html lang="et">
 <head>
     <title>Teooriaeksam</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php

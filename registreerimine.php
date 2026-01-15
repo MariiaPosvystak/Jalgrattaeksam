@@ -12,6 +12,7 @@ if(isSet($_REQUEST["sisestusnupp"])){
 <html lang="et">
 <head>
     <title>Kasutaja registreerimine</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php

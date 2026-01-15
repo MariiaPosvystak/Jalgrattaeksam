@@ -20,6 +20,7 @@ $kask->execute();
 <html lang="et">
 <head>
     <title>Tänavasõit</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php

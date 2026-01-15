@@ -24,6 +24,7 @@ function asenda($nr){
 <html lang="et">
 <head>
     <title>Lõpetamine</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <?php
