@@ -17,11 +17,14 @@ $kask=$connect->prepare("SELECT id, eesnimi, perekonnanimi   FROM jalgrattaeksam
 $kask->execute();
 ?>
 <!doctype html>
-<html>
+<html lang="et">
 <head>
     <title>Ringtee</title>
 </head>
 <body>
+<?php
+include("header.php");
+?>
 <h1>Ringtee</h1>
 <table>
     <?php

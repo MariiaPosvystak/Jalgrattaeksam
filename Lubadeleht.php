@@ -21,11 +21,14 @@ function asenda($nr){
 }
 ?>
 <!doctype html>
-<html>
+<html lang="et">
 <head>
     <title>Lõpetamine</title>
 </head>
 <body>
+<?php
+include("header.php");
+?>
 <h1>Lõpetamine</h1>
 <table>
     <tr>

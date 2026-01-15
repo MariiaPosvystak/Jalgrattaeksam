@@ -9,11 +9,14 @@ if(isSet($_REQUEST["sisestusnupp"])){
 }
 ?>
 <!doctype html>
-<html>
+<html lang="et">
 <head>
     <title>Kasutaja registreerimine</title>
 </head>
 <body>
+<?php
+include("header.php");
+?>
 <h1>Registreerimine</h1>
 <?php
 if(isSet($_REQUEST["lisatudeesnimi"])){
