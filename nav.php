@@ -6,5 +6,6 @@
         <li><a href="Ringtee.php">Ringtee</a></li>
         <li><a href="Tanav.php">Tänavasõit</a>
         <li><a href="Lubadeleht.php">Lubadeleht</a>
+        <li class="right"><a href="login.php">Logi sisse</a>
     </ul>
 </nav>
