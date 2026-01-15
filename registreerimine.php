@@ -9,7 +9,7 @@ if(isSet($_REQUEST["sisestusnupp"])){
 }
 ?>
 <!doctype html>
-<html>
+<html lang="et">
 <head>
     <title>Kasutaja registreerimine</title>
 </head>
