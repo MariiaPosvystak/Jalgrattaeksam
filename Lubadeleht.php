@@ -12,7 +12,12 @@ $kask=$connect->prepare(
  slaalom, ringtee, t2nav, luba FROM jalgrattaeksam;");
 $kask->bind_result($id, $eesnimi, $perekonnanimi, $teooriatulemus,   $slaalom, $ringtee, $t2nav, $luba);
 $kask->execute();
-
+if (isset($_REQUEST["kustutusid"])) {
+    $paring = $connect->prepare("DELETE FROM jalgrattaeksam WHERE id=?");
+    $paring->bind_param("i", $_REQUEST["kustutusid"]);
+    $paring->execute();
+    header("Location: " . $_SERVER["PHP_SELF"]);
+}
 function asenda($nr){
     if($nr==-1){return ".";} //tegemata
     if($nr== 1){return "korras";}
@@ -41,6 +46,7 @@ include("nav.php");
         <th>Ringtee</th>
         <th>Tänavasõit</th>
         <th>Lubade väljastus</th>
+        <th>Kustuta</th>
     </tr>
     <?php
     while($kask->fetch()){
@@ -60,6 +66,7 @@ include("nav.php");
  <td>$asendatud_ringtee</td> 
  <td>$asendatud_t2nav</td> 
  <td>$loalahter</td> 
+ <td><a href='?kustutusid=$id'>Kustuta</a></td>
  </tr> 
  ";
     }
