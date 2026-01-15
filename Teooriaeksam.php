@@ -1,14 +1,10 @@
 <?php
-require_once("konf.php");
-global $connect;
-if(!empty($_REQUEST["teooriatulemus"])){
-    $kask=$connect->prepare(
-        "UPDATE jalgrattaeksam SET teooriatulemus=? WHERE id=?");
-    $kask->bind_param("ii", $_REQUEST["teooriatulemus"], $_REQUEST["id"]); $kask->execute();
+require_once("funktsioonid.php");
+if (isset($_REQUEST['teooriatulemus'])) {
+    teooriatulemus($_REQUEST['id'], $_REQUEST['teooriatulemus']);
+    header("Location:" . $_SERVER['PHP_SELF']);
+    exit;
 }
-$kask=$connect->prepare("SELECT id, eesnimi, perekonnanimi   FROM jalgrattaeksam WHERE teooriatulemus=-1");
-$kask->bind_result($id, $eesnimi, $perekonnanimi);
-$kask->execute();
 ?>
 <!doctype html>
 <html lang="et">
@@ -23,7 +19,7 @@ include("nav.php");
 ?>
 <table>
     <?php
-    while($kask->fetch()){
+    /*while($kask->fetch()){
         echo " 
  <tr> 
  <td>$eesnimi</td> 
@@ -34,9 +30,9 @@ include("nav.php");
  <input type='submit' value='Sisesta tulemus' /> 
  </form> 
  </td> 
-</tr> 
+</tr>
  ";
-    }
+    }*/
     ?>
 </table>
 <?php
