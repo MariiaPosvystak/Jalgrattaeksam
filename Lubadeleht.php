@@ -21,7 +21,7 @@ function asenda($nr){
 }
 ?>
 <!doctype html>
-<html>
+<html lang="et">
 <head>
     <title>Lõpetamine</title>
 </head>
