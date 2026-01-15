@@ -1,5 +1,6 @@
-<?php include('konf.php'); ?>
+<?php  ?>
 <?php
+require('konf.php');
 global $connect;
 session_start();
 if (isset($_SESSION['tuvastamine'])) {
@@ -26,9 +27,29 @@ if (!empty($_POST['login']) && !empty($_POST['pass'])) {
     }
 }
 ?>
-<h1>Login</h1>
-<form action="" method="post">
-    Login: <input type="text" name="login"><br>
-    Password: <input type="password" name="pass"><br>
-    <input type="submit" value="Logi sisse">
-</form>
+<!doctype html>
+<html lang="et">
+<head>
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<?php
+include("header.php");
+include("nav.php");
+?>
+<main>
+    <h1>Login</h1>
+    <form action="" method="post" class="center">
+        <label for="login">Login: </label><br>
+        <input type="text" name="login" id="login"><br><br>
+        <label for="pass">Password: </label><br>
+        <input type="password" name="pass" id="pass"><br><br>
+        <input type="submit" value="Logi sisse">
+    </form>
+</main>
+<?php
+include("footer.php");
+?>
+</body>
+</html>

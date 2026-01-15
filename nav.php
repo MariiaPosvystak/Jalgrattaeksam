@@ -6,6 +6,14 @@
         <li><a href="Ringtee.php">Ringtee</a></li>
         <li><a href="Tanav.php">Tänavasõit</a>
         <li><a href="Lubadeleht.php">Lubadeleht</a>
-        <li class="right"><a href="login.php">Logi sisse</a>
+        <?php
+        if (isset($_SESSION['turvastamine'])) {
+            echo '<li>Tere, '.htmlspecialchars($_SESSION['turvastamine']).'</li>';
+            echo '<li class="right"><a href="logout.php">Logi välja</a>';
+        }
+        else{
+            echo '<li class="right"><a href="login.php">Logi sisse</a>';
+        }
+        ?>
     </ul>
 </nav>
