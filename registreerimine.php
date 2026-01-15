@@ -1,6 +1,5 @@
 <?php
-require_once("konf.php");
-global $connect;
+require("funktsioonid.php");
 if (!empty($_POST["sisestusnupp"])) {
     if (isset($_POST["eesnimi"])) {
         $eesnimi = trim($_POST["eesnimi"]);
@@ -19,10 +18,7 @@ if (!empty($_POST["sisestusnupp"])) {
     } elseif ($perekonnanimi === '' || is_numeric($perekonnanimi)) {
         echo "Sisesta oma perekonnanimi!";
     } else {
-        $stmt = $connect->prepare("INSERT INTO jalgrattaeksam (eesnimi, perekonnanimi) VALUES (?, ?)");
-        $stmt->bind_param("ss", $eesnimi, $perekonnanimi);
-        $stmt->execute();
-        $connect->close();
+        lisaKasutaja($eesnimi, $perekonnanimi);
     }
 }
 ?>
@@ -44,7 +40,7 @@ include("nav.php");
         <dt>Eesnimi:</dt>
         <dd><input type="text" name="eesnimi" /></dd>
         <dt>Perekonnanimi:</dt>
-        <dd><input type="text" name="perekonnanimi" /></dd>
+        <dd><input type="text" name="perekonnanimi" id="perekonnanimi"/></dd>
         <dt><input type="submit" name="sisestusnupp" value="sisesta" /></dt>  </dl>
 </form>
 </main>
