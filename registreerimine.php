@@ -16,6 +16,7 @@ if(isSet($_REQUEST["sisestusnupp"])){
 <body>
 <?php
 include("header.php");
+include("nav.php");
 ?>
 <h1>Registreerimine</h1>
 <?php

@@ -24,6 +24,7 @@ $kask->execute();
 <body>
 <?php
 include("header.php");
+include("nav.php");
 ?>
 <h1>Tänavasõit</h1>
 <table>

@@ -18,6 +18,7 @@ $kask->execute();
 <body>
 <?php
 include("header.php");
+include("nav.php");
 ?>
 <table>
     <?php

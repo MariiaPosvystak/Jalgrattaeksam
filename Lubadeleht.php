@@ -28,6 +28,7 @@ function asenda($nr){
 <body>
 <?php
 include("header.php");
+include("nav.php");
 ?>
 <h1>Lõpetamine</h1>
 <table>
