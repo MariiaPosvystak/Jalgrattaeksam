@@ -11,7 +11,7 @@ $kask->bind_result($id, $eesnimi, $perekonnanimi);
 $kask->execute();
 ?>
 <!doctype html>
-<html>
+<html lang="et">
 <head>
     <title>Teooriaeksam</title>
 </head>
