@@ -1,17 +1,16 @@
 <?php
+require("funktsioonid.php");
 require("konf.php");
 global $connect;
 if(!empty($_REQUEST["korras_id"])){
-    $kask=$connect->prepare(
-        "UPDATE jalgrattaeksam SET ringtee=1 WHERE id=?");
-    $kask->bind_param("i", $_REQUEST["korras_id"]);
-    $kask->execute();
+    ringtee_korras($_REQUEST['korras_id']);
+    header("Location:". $_SERVER['PHP_SELF']);
+    exit;
 }
 if(!empty($_REQUEST["vigane_id"])){
-    $kask=$connect->prepare(
-        "UPDATE jalgrattaeksam SET ringtee=2 WHERE id=?");
-    $kask->bind_param("i", $_REQUEST["vigane_id"]);
-    $kask->execute();
+    ringtee_vigane($_REQUEST['vigane_id']);
+    header("Location:". $_SERVER['PHP_SELF']);
+    exit;
 }
 $kask=$connect->prepare("SELECT id, eesnimi, perekonnanimi   FROM jalgrattaeksam WHERE teooriatulemus>=9 AND ringtee=-1");  $kask->bind_result($id, $eesnimi, $perekonnanimi);
 $kask->execute();
